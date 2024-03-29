@@ -85,7 +85,7 @@ export default class CommandMenuExtension extends Extension {
         style_class: 'system-status-icon' 
       };
       let icon = new St.Icon(menuIcon);
-      box.add(icon);
+      box.add_child(icon);
     }
 
     let toplabel = new St.Label({
@@ -93,7 +93,7 @@ export default class CommandMenuExtension extends Extension {
       y_expand: true,
       y_align: Clutter.ActorAlign.CENTER
     });
-    box.add(toplabel);
+    box.add_child(toplabel);
     popUpMenu.add_child(box);
     let level = 0;
     this.populateMenuItems(popUpMenu.menu, this.commands.menu, level);
